@@ -8,6 +8,7 @@ class ExperiencesController < ApplicationController
     @skill = Skill.find(params[:skill_id])
     @experience = @skill.experiences.new(experience_params)
     if @experience.save
+       flash[:notice] = "experience successfully added!"
       redirect_to skill_path(@experience.skill)
     else
       render :new
