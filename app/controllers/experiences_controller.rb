@@ -37,6 +37,6 @@ end
     end
 
 private def experience_params
-  params.require(:experience).permit(:description, :done)
+  params.require(:experience).permit(:description)
  end
 end

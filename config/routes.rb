@@ -2,10 +2,12 @@ Rails.application.routes.draw do
 
  root 'skills#index'
 
+
+  resources :about, :only => [:index, :show] 
   resources :skills do
-    resources :experiences, :except => [:show, :index] 
-
-    
+    resources :experiences, :except => [:index, :show]
+  resources :projects, :only => [:index] do
+    resources :github, :only => [:index]          
+    end
   end
-
 end
