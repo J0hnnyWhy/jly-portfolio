@@ -10,18 +10,23 @@
     <% @skill.experiences.each do |experience| %>
     <li>
       <%= experience.description %>
-        <%= form_for [@skill, experience], :html => { :class => 'form-inline'} do |f| %>
-                <input name ="_method" type="hidden" value="patch" />
-                <%= f.hidden_field :done, :value => true %>
 
       <%= link_to "Edit", edit_skill_experience_path(@skill, experience) %>
       <%= link_to "Delete", skill_experience_path(@skill, experience),
                               :data => {:confirm => "Are you sure?",
                               :method => "delete"} %>
     </li>
-    <% end %>
+    
   </ul>
-
-  <% else %>
-    <p>There are no experiences yet!</p>
   <% end %>
+
+<% else %>
+  <p>There are no experiences yet!</p>
+<% end %>
+
+<p><%= link_to "Add an Experience", new_skill_experience_path(@skill) %></p>
+<p><%= link_to "Delete Skill", skill_path(@skill),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p><%= link_to "Return to Home Page", skills_path %></p>

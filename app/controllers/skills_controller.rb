@@ -5,7 +5,7 @@ class SkillsController < ApplicationController
 
   def show
     @skill = Skill.find(params[:id])
-    @experences = Experence.done
+    @experiences = Experience.all
   end
 
 
