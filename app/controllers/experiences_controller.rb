@@ -24,6 +24,7 @@ end
     @skill = Skill.find(params[:skill_id])
     @experience = Experience.find(params[:id])
     if @experience.update(experience_params)
+      flash[:notice] = "experience successfully updated!"
       redirect_to skill_path(@experience.skill)
     else
       render :edit
