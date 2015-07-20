@@ -1,5 +1,7 @@
 FactoryGirl.define do
-  factory(:task) do
-    name('finish macrame plant holder')
+  factory(:user) do
+    username "foo"
+    password "foobar"
+    email { "#{username}@example.com" }
   end
 end

@@ -4,6 +4,7 @@ gem 'rails'
 gem 'pg'
 gem 'sass-rails'
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
@@ -11,6 +12,7 @@ gem 'turbolinks'
 gem 'pry'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem 'devise'
+gem 'paperclip', '~> 4.1'
 
 group :development do
   gem 'better_errors'
