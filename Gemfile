@@ -8,6 +8,9 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'pry'
+gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
+gem 'devise'
 
 group :development do
   gem 'better_errors'
@@ -26,4 +29,6 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'simplecov', require: false
 end
