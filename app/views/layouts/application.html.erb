@@ -28,8 +28,9 @@
         <ul class="nav navbar-nav navbar-right">
           <% if !user_signed_in? %>
           <li><%= link_to "Sign Up", new_user_registration_path %></a></li>
-          <li><%= link_to "Sign In",  new_user_session_path %></a></li>
+          <li><%= link_to "Log In",  new_user_session_path %></a></li>
           <% else %>
+          Logged in as <strong><%= current_user.name %></strong>
           <li class="session-info"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% end %>
         </ul>

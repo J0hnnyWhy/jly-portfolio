@@ -6,6 +6,6 @@ describe "delete an experience process" do
     experience = Experience.create(:description => 'been there', :skill_id => skill.id)
     visit skill_path(experience.skill_id)
     click_on 'Delete'
-    expect(page).to have_content 'Home About'
+    expect(page).to have_content 'John Young'
   end
 end

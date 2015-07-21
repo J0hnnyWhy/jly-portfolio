@@ -76,5 +76,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-config.include Factory::Syntax::Methods
+# config.include Factory::Syntax::Methods
 end
